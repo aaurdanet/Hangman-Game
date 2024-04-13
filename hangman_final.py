@@ -2,6 +2,7 @@ import random
 from hangman_words import word_list
 
 chosen_word = random.choice(word_list)
+
 word_length = len(chosen_word)
 
 end_of_game = False
@@ -37,6 +38,7 @@ while not end_of_game:
         if lives == 0:
             end_of_game = True
             print("You lose.")
+            print(f"Answer: " + chosen_word)
 
     #Join all the elements in the list and turn it into a String.
     print(f"{' '.join(display)}")
